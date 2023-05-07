@@ -1,0 +1,2 @@
+Redirect 301 /page1.html /page2.html
+Redirect 301 /page2.html /index.php
