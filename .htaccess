@@ -1,2 +1,10 @@
-Redirect 301 /page1.html /page2.html
-Redirect 301 /page2.html /index.php
+Redirect 301 /page1.html /page2.html?
+#Redirect 301 /category /new_category.html
+
+
+RewriteEngine on
+#RewriteRule ^/?category/(.*\.html)$ /new_category.html [R=301,L]
+#RewriteRule ^/?category/(.*\.php)$ /new_category_php.php [R=301,L]
+
+RewriteCond %{HTTP_HOST} htaccess-demo.local$
+RewriteRule ^(.*)$ index.php [L]
